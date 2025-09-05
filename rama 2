@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int i,numeros;
+    double pi=0.0;
+    short signo=1;
+
+    system("COLOR F5");
+    puts("\t\tCALCULAR PI CON LA FORMULA DE LEIBNIZ\n");
+    puts("LA FORMULA DE LEIBNIZ CALCULA NUMEROS IMPARES\n");
+    printf("cuantos numeros deseas ingresar para calcular PI\n");
+    scanf("%d",&numeros);
+    for(i=0;i<numeros;i++){
+        // denominadores impares
+        double denominador=2.0*i+1.0;
+        //suma el arreglo de los numeros ingresados 
+        pi+=(double)signo/denominador;
+        signo=-signo;
+       
+    }
+    pi=pi*4;
+     printf("\nCantidad de numeros %d: el PI de los numeros ingresados%lf\n ",numeros,pi);
+}
